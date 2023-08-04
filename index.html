@@ -1,9 +1,339 @@
-<html>
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./styles.css" rel="stylesheet" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Merriweather+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>CSS Cheatsheet</title>
+</head>
 <body>
-  <h1>Cigdem</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
+    <header class="page-header">
+        <h1>CSS Cheatsheet</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#font">Font</a></li>
+            <li><a href="#color">Color</a></li>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#class">Class</a></li>
+            <li><a href="#box">Box</a></li>
+          </ul>
+    </nav>
+    <main>
+        <h2 id="font">Font Properties</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Font-family</td>
+                    <td>Changes the font family of certain words, sentences, paragraphs, etc.</td>
+                    <td>P { font-family: "New Century Schoolbook", Times, serif; }</td>
+                </tr>
+                <tr>
+                    <td>Font-style</td>
+                    <td>Changes text: normal, oblique, and italics.</td>
+                    <td>H1 { font-style: oblique; } <br> P { font-style: normal; }</td>
+                </tr>
+                <tr>
+                    <td>Font-variant</td>
+                    <td>Used to display font in normal or small-caps.</td>
+                    <td>SPAN { font-variant: small-caps; }</td>
+                </tr>
+                <tr>
+                    <td>Font-weight</td>
+                    <td>Used to specify the weight of the font.</td>
+                    <td>H1 { font-weight: 800; } or <br> P { font-weight: normal; }</td>
+                </tr>
+                <tr>
+                    <td>Font-size</td>
+                    <td>Used to modify the size of the displayed font.</td>
+                    <td>H1 { font-size: large; } or <br>P { font-size: 12pt; } <br>LI { font-size: 90%; } <br>STRONG { font-size: larger; }</td>
+                </tr>
+                <tr>
+                    <td>Font</td>
+                    <td>Used to combine all properties of fonts.</td>
+                    <td>P { font: italic bold 12pt/14pt Times, serif; }</td>
+                </tr>
+                </tbody>
+            </table>
+        <h2 id="color">Color and Background Properties</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Color</td>
+                    <td>Changes the color of text.</td>
+                    <td>H1 { color: blue; } or <br> H2 { color: #000080; }</td>
+                </tr>
+                <tr>
+                    <td>Background-Color</td>
+                    <td>Sets the background color of an element.</td>
+                    <td>BODY { background-color: white; } <br> H1 { background-color: #000080; }</td>
+                </tr>
+                <tr>
+                    <td>Background-Image</td>
+                    <td>Sets the background image of an element.</td>
+                    <td>BODY { background-image: url(/images/foo.gif); } <br> P { background-image: url(http://www.htmlhelp.com/bg.png); }</td>
+                </tr>
+                <tr>
+                    <td>Background-Repeat</td>
+                    <td>Determines how a specified background image is repeated. The repeat-x value will repeat the image horizontally while the repeat-y value will repeat the image vertically.</td>
+                    <td>BODY { background: white url(candybar.gif); <br>background-repeat: repeat-x; }</td>
+                </tr>
+                <tr>
+                    <td>Background-Attachment</td>
+                    <td>Determines if a specified background image will scroll with the content or be fixed with regard to the canvas.</td>
+                    <td>BODY { background: white url(candybar.gif); <br>background-attachment: fixed; }</td>
+                </tr>
+                <tr>
+                    <td>Background</td>
+                    <td>Used to combine all properties of background.</td>
+                    <td>BODY { background: white url(http://www.htmlhelp.com/foo.gif); } <br>BLOCKQUOTE { background: #7fffd4; } <br>P { background: url(../backgrounds/pawn.png) #f0f8ff fixed; } <br>TABLE { background: red url(leaves.jpg) no-repeat bottom right; }</td>
+                </tr>
+                </tbody>
+            </table>
+        <h2 id="text">Text Properties</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Word-Spacing</td>
+                    <td>Defines an additional amount of space between words.</td>
+                    <td>P EM { word-spacing: 0.4em; } <br> P.note { word-spacing: -0.2em; }</td>
+                </tr>
+                <tr>
+                    <td>Letter-Spacing</td>
+                    <td>Defines an additional amount of space between characters.</td>
+                    <td>H1 { letter-spacing: 0.1em; } <br> P.note { letter-spacing: -0.1em; }</td>
+                </tr>
+                <tr>
+                    <td>Text-Decoration</td>
+                    <td>Allows text to be decorated through one of five properties: underline, overline, line-through, blink, none.</td>
+                    <td>A:link, A:visited, A:active { text-decoration: none; }</td>
+                </tr>
+                <tr>
+                    <td>Vertical-Align</td>
+                    <td>Used to alter the vertical positioning of an inline element, relative to its parent element or to the element's line.</td>
+                    <td>IMG.middle { vertical-align: middle; } <br> IMG { vertical-align: 50%; }<br>.exponent { vertical-align: super; }</td>
+                </tr>
+                <tr>
+                    <td>Text-Transform</td>
+                    <td>Allows for capitalizing the first letter of each word (capitalize), capitalizing all letters of a word (uppercase), using all small letters in each word(lowercase), and the inital value(none).</td>
+                    <td>H1 { text-transform: uppercase; } <br> H2 { text-transform: capitalize; }</td>
+                </tr>
+                <tr>
+                    <td>Text-Align</td>
+                    <td>Used to justify text left, center, right, and justify.</td>
+                    <td>H1 { text-align: center; } <br> P.newspaper { text-align: justify; }</td>
+                </tr>
+                <tr>
+                    <td>Text-Indent</td>
+                    <td>Used to specify the amount of indentation prior to the first line of text.</td>
+                    <td>P { text-indent: 5em; }</td>
+                </tr>
+                <tr>
+                    <td>Line-Height</td>
+                    <td>Used to control the spacing between baselines of text.</td>
+                    <td>P { line-height: 200%; }</td>
+                </tr>
+                
+                </tbody>
+            </table>
+        <h2 id="class">Classification Properties</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>List-Style-Type</td>
+                    <td>Specifies the type of list-item marker, and is used if list-style- image is none or if image loading is turned off.</td>
+                    <td>LI.square { list-style-type: square; } <br> UL.plain { list-style-type: none; } <br> OL { list-style-type: upper-alpha; } /* A B C D E etc. */ <br> OL OL { list-style-type: decimal; } /* 1 2 3 4 5 etc. */ <br> OL OL OL { list-style-type: lower-roman; } /* i ii iii iv v etc. */ </td>
+                </tr>
+                <tr>
+                    <td>List-Style-Image</td>
+                    <td>Specifies the image that will be used as list-item marker when image loading is turned on, replacing the marker specified in the list-style-type property.</td>
+                    <td>UL.check { list-style-image: url(/LI-markers/checkmark.gif); } <br> UL LI.x { list-style-image: url(x.png); }</td>
+                </tr>
+                <tr>
+                    <td>List-Style-Position</td>
+                    <td>Determines where the marker is placed in regard to the list item. If the value <em>inside</em> is used, the lines will wrap under the marker instead of being indented. <em>outside</em> is default.</td>
+                    <td>UL { list-style-position: inside; }</td>
+                </tr>
+                </tbody>
+            </table>
+        <h2 id="box">Box Properties</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Property</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Margin-Top</td>
+                    <td>Sets the top margin of an element by specifying a length or a percentage.</td>
+                    <td>BODY { margin-top: 5pt; }</td>
+                </tr>
+                <tr>
+                    <td>Margin-Right</td>
+                    <td>Sets the right margin of an element by specifying a length or a percentage.</td>
+                    <td>P.narrow { margin-right: 50%; }</td>
+                </tr>
+                <tr>
+                    <td>Margin-Bottom</td>
+                    <td>sets the bottom margin of an element by specifying a length or a percentage.</td>
+                    <td>DT { margin-bottom: 3em; }</td>
+                </tr>
+                <tr>
+                    <td>Margin-Left</td>
+                    <td>sets the left margin of an element by specifying a length or a percentage.</td>
+                    <td>ADDRESS { margin-left: 50%; }</td>
+                </tr>
+                <tr>
+                    <td>Margin</td>
+                    <td>Sets the margins of an element by specifying top, bottom, left and right margins -- all either specifying length or percentage.</td>
+                    <td>BODY { margin: 5em; } /* all margins 5em */ <br> P { margin: 2em 4em; } /* top & bottom 2em, left & right 4em */ DIV { margin: 1em 2em 3em 4em; } <br> /* top margin 1em, right 2em, bottom 3em, left 4em */</td>
+                </tr>
+                <tr>
+                    <td>Padding-Top</td>
+                    <td>Describes the amount of space between the top border and the content of the selector.</td>
+                    <td>P { padding-top: 20%; }</td>
+                </tr>
+                <tr>
+                    <td>Padding-Right</td>
+                    <td>Describes the amount of space between the right border and the content of the selector.</td>
+                    <td>P { padding-right: 20 px; }</td>
+                </tr>
+                <tr>
+                    <td>Padding-Bottom</td>
+                    <td>Describes the amount of space between the bottom border and the content of the selector.</td>
+                    <td>P { padding-bottom: 5 em; }</td>
+                </tr>
+                <tr>
+                    <td>Padding-Left</td>
+                    <td>Describes the amount of space between the left border and the content of the selector.</td>
+                    <td>P { padding-left: 15 pt; }</td>
+                </tr>
+                <tr>
+                    <td>Padding</td>
+                    <td>Shorthand for the padding-top, padding-right, padding-bottom, and padding-left properties.</td>
+                    <td>BLOCKQUOTE { padding: 2em 4em 5em 4em; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Top-Width</td>
+                    <td>Used to specify the width of an element's top border.</td>
+                    <td>P { border-top: 20%; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Right-Width</td>
+                    <td>Used to specify the width of an element's right border.</td>
+                    <td>P { border-right: 20%; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Bottom-Width</td>
+                    <td>Used to specify the width of an element's bottom border.</td>
+                    <td>P { border-bottom: 20%; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Left-Width</td>
+                    <td>Used to specify the width of an element's left border.</td>
+                    <td>P { border-left: 20%; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Width</td>
+                    <td>Used to set the width of an element's border (either all borders, or specifying top border, right border, bottom border, left border).</td>
+                    <td>P { border-width: 20%; } <br> P { border-width: 10px 5px 10px 5px; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Color</td>
+                    <td>Used to set the color of an element's border.</td>
+                    <td>P { border-color: #00000; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Style</td>
+                    <td>Sets style of a border - none, dotted, dashed, solid, double.</td>
+                    <td>P { border-style: dotted; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Top</td>
+                    <td>Sets the width, style, and color of an element's top border.</td>
+                    <td>P { border-top: 10px, red, double; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Right</td>
+                    <td>Sets the width, style, and color of an element's right border.</td>
+                    <td>P { border-right: 10px, red, double; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Bottom</td>
+                    <td>Sets the width, style, and color of an element's bottom border.</td>
+                    <td>P { border-bottom: 10px, red, double; }</td>
+                </tr>
+                <tr>
+                    <td>Border-Left</td>
+                    <td>Sets the width, style, and color of an element's left border.</td>
+                    <td>P { border-left: 10px, red, double; }</td>
+                </tr>
+                <tr>
+                    <td>Border</td>
+                    <td>Sets the width, style, and color of an element's border.</td>
+                    <td>P { border: 10px, red, double; }</td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td>Each block-level or replaced element can be given a width, specified as a length, a percentage, or as auto.</td>
+                    <td>P { width: 15px; } <br> H1 { width: 35%; } <br> .foo { width: auto; }</td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>Each block-level or replaced element can be given a height, specified as a length or as auto.</td>
+                    <td>P { height: 15px; } <br> H1 { height: 35%; } <br> .foo { height: auto; }</td>
+                </tr>
+                <tr>
+                    <td>Float</td>
+                    <td>Allows text to wrap around an element (left, right, none).</td>
+                    <td>P { float: left; } <br> H1 { float: right; } <br> .foo { float: none; }</td>
+                </tr>
+                <tr>
+                    <td>Clear</td>
+                    <td>Specifies whether an element allows floating elements to its sides (left, right, none).</td>
+                    <td>P { clear: left; } <br> H1 { clear: right; } <br> .foo { clear: none; }</td>
+                </tr>
+                </tbody>
+            </table>
+    </main>
+    <footer>
+        <p><em>Happy Coding! - Chi</em></p>
+    </footer>
 </body>
- 
 </html>
